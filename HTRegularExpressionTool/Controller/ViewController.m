@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "NSPredicate+HTAdditions.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *inputStrTF;
+@property (weak, nonatomic) IBOutlet UILabel *resultLb;
 
 @end
 
@@ -19,6 +23,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)checkEmail:(id)sender {
+    _resultLb.text = [NSPredicate checkEmail:_inputStrTF.text] ? @"邮箱合法" : @"邮箱不合法";
+}
+
+
+// -- 验证身份证
+-(IBAction)checkIndentityCard:(id)sender {
+    _resultLb.text = [NSPredicate checkIdentityCardNumber:_inputStrTF.text] ? @"身份证合法" : @"身份证不合法";
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

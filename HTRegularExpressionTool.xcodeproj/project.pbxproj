@@ -8,24 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		2577246C1F0DF485007A6461 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2577246B1F0DF485007A6461 /* main.m */; };
-		2577246F1F0DF485007A6461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2577246E1F0DF485007A6461 /* AppDelegate.m */; };
 		257724721F0DF485007A6461 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 257724711F0DF485007A6461 /* ViewController.m */; };
 		257724751F0DF485007A6461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257724731F0DF485007A6461 /* Main.storyboard */; };
 		257724771F0DF485007A6461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257724761F0DF485007A6461 /* Assets.xcassets */; };
 		2577247A1F0DF485007A6461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257724781F0DF485007A6461 /* LaunchScreen.storyboard */; };
+		257724851F0DF5A4007A6461 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 257724831F0DF5A4007A6461 /* AppDelegate.m */; };
+		2577248F1F0E1078007A6461 /* NSPredicate+HTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2577248E1F0E1078007A6461 /* NSPredicate+HTAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		257724671F0DF485007A6461 /* HTRegularExpressionTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTRegularExpressionTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2577246B1F0DF485007A6461 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2577246D1F0DF485007A6461 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2577246E1F0DF485007A6461 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		257724701F0DF485007A6461 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		257724711F0DF485007A6461 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		257724741F0DF485007A6461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		257724761F0DF485007A6461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		257724791F0DF485007A6461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2577247B1F0DF485007A6461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		257724821F0DF5A4007A6461 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		257724831F0DF5A4007A6461 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		257724841F0DF5A4007A6461 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2577248D1F0E1078007A6461 /* NSPredicate+HTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPredicate+HTAdditions.h"; sourceTree = "<group>"; };
+		2577248E1F0E1078007A6461 /* NSPredicate+HTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPredicate+HTAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +61,9 @@
 		257724691F0DF485007A6461 /* HTRegularExpressionTool */ = {
 			isa = PBXGroup;
 			children = (
-				2577246D1F0DF485007A6461 /* AppDelegate.h */,
-				2577246E1F0DF485007A6461 /* AppDelegate.m */,
-				257724701F0DF485007A6461 /* ViewController.h */,
-				257724711F0DF485007A6461 /* ViewController.m */,
-				257724731F0DF485007A6461 /* Main.storyboard */,
-				257724761F0DF485007A6461 /* Assets.xcassets */,
-				257724781F0DF485007A6461 /* LaunchScreen.storyboard */,
-				2577247B1F0DF485007A6461 /* Info.plist */,
+				257724881F0DF6DE007A6461 /* Model */,
+				257724891F0DF72C007A6461 /* Controller */,
+				257724871F0DF613007A6461 /* Others */,
 				2577246A1F0DF485007A6461 /* Supporting Files */,
 			);
 			path = HTRegularExpressionTool;
@@ -77,6 +75,37 @@
 				2577246B1F0DF485007A6461 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		257724871F0DF613007A6461 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				257724731F0DF485007A6461 /* Main.storyboard */,
+				257724761F0DF485007A6461 /* Assets.xcassets */,
+				257724781F0DF485007A6461 /* LaunchScreen.storyboard */,
+				257724821F0DF5A4007A6461 /* AppDelegate.h */,
+				257724831F0DF5A4007A6461 /* AppDelegate.m */,
+				257724841F0DF5A4007A6461 /* Info.plist */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		257724881F0DF6DE007A6461 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2577248D1F0E1078007A6461 /* NSPredicate+HTAdditions.h */,
+				2577248E1F0E1078007A6461 /* NSPredicate+HTAdditions.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		257724891F0DF72C007A6461 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				257724701F0DF485007A6461 /* ViewController.h */,
+				257724711F0DF485007A6461 /* ViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				257724851F0DF5A4007A6461 /* AppDelegate.m in Sources */,
 				257724721F0DF485007A6461 /* ViewController.m in Sources */,
-				2577246F1F0DF485007A6461 /* AppDelegate.m in Sources */,
 				2577246C1F0DF485007A6461 /* main.m in Sources */,
+				2577248F1F0E1078007A6461 /* NSPredicate+HTAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +344,7 @@
 				257724801F0DF485007A6461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
