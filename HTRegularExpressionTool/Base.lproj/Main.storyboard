@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-M8-ZNh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-M8-ZNh">
                                 <rect key="frame" x="15" y="45" width="345" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Uck-UO-xuV"/>
@@ -39,8 +39,16 @@
                                 <color key="textColor" red="0.99955970049999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QyN-GI-07K">
+                                <rect key="frame" x="46" y="158" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="中文"/>
+                                <connections>
+                                    <action selector="checkChinese:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DhH-CS-eCR"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-XD-PCE">
-                                <rect key="frame" x="50" y="133" width="46" height="30"/>
+                                <rect key="frame" x="46" y="265" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="邮箱"/>
                                 <connections>
@@ -48,11 +56,35 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Do-xD-wds">
-                                <rect key="frame" x="153" y="133" width="69" height="30"/>
+                                <rect key="frame" x="132" y="265" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="身份证"/>
                                 <connections>
                                     <action selector="checkIndentityCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPT-f9-F4i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIj-oB-RS8">
+                                <rect key="frame" x="132" y="158" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="手机号"/>
+                                <connections>
+                                    <action selector="checkPhone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OvN-fv-was"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubg-FO-Tzn">
+                                <rect key="frame" x="39" y="374" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="URL"/>
+                                <connections>
+                                    <action selector="checkURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9vz-FT-slt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XS-No-Yom">
+                                <rect key="frame" x="220" y="158" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="金额"/>
+                                <connections>
+                                    <action selector="checkMoney:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gT9-mi-aHo"/>
                                 </connections>
                             </button>
                         </subviews>

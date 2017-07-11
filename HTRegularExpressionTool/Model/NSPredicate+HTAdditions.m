@@ -10,6 +10,37 @@
 
 @implementation NSPredicate (HTAdditions)
 
+/**
+ * 验证正则表达式 推荐网址：https://regex101.com/#javascript
+ */
+
++ (BOOL)checkChinese:(NSString *)chinese {
+    NSString *regex = @"^[\\u4e00-\\u9fa5]{0,}$";
+    NSPredicate *predicate = [self predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [predicate evaluateWithObject:chinese];
+}
+
++ (BOOL)checkPhone:(NSString *)phone {
+    /**
+     * 参考：https://www.chahaoba.com
+     * 130、131、132、133、134、135、136、137、138、139
+     * 145、147
+     * 150、151、152、153、155、156、157、158、159
+     * 170、171、173、175、176、177、178
+     * 180、181、182、183、184、185、186、187、188、189
+     * 正确性有待考证
+     */
+    NSString *regex = @"^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|17[0|1|3|5|6|7|8]|18[0-9])\\d{8}$";
+    NSPredicate *predicate = [self predicateWithFormat:@"SELF MATCHES %@",regex];
+    return [predicate evaluateWithObject:phone];
+}
+
++ (BOOL)checkMoney:(NSString *)money {
+    NSString *regex = @"^[0-9]+(.[0-9]{2})?$";// 还有问题
+    NSPredicate *predicate = [self predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [predicate evaluateWithObject:money];
+}
+
 + (BOOL)checkEmail:(NSString *)email {
     NSString *regex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *predicate = [self predicateWithFormat:@"SELF MATCHES %@", regex];
@@ -67,4 +98,11 @@
         return flag;
     }
 }
+
++ (BOOL)checkUrl:(NSString *)url {
+    NSString *regex = @"http(s)?://([\\w-]+\\.)+[\\w-]+(/[\\w- ./?%&=]*)?";
+    NSPredicate *predicate = [self predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [predicate evaluateWithObject:url];
+}
+
 @end
